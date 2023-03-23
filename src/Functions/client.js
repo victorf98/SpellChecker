@@ -41,7 +41,7 @@ module.exports = class extends Client {
             console.log("Loading commands...");
             await this.commands.clear();
 
-            const route = __dirname + "\\..\\commands";
+            const route = __dirname + "/../commands";
             const files_route = fs.readdirSync(route);
             if (files_route.length) {
                 files_route.forEach((dir) => {
@@ -73,7 +73,7 @@ module.exports = class extends Client {
             await this.slashCommands.clear();
             this.slashArray = [];
 
-            const route = __dirname + "\\..\\SlashCommands";
+            const route = __dirname + "/../SlashCommands";
             const files_route = fs.readdirSync(route);
             if (files_route.length) {
                 files_route.forEach((dir) => {
@@ -109,7 +109,7 @@ module.exports = class extends Client {
             console.log("Loading events...");
             this.removeAllListeners();
 
-            const route = __dirname + "\\..\\events";
+            const route = __dirname + "/../events";
             const files_route = fs.readdirSync(route);
             if (files_route.length) {
                 files_route.forEach((dir) => {
